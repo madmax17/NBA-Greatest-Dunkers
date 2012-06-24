@@ -31,10 +31,17 @@
         <!--[if IE]>
          <script src="js/jquery.booklet.1.3.1.min.js" type="text/javascript"></script>
         <![endif]-->
+
+        <!--[if lt IE 9]> 
+			<style>
+				.rw-wrapper{ display: none; } 
+				.rw-sentence-IE{ display: block;  }
+			</style>
+		<![endif]-->
 				
 		<script type="text/javascript">		                           /*panel jquery*/
 		    $(document).ready(function () {
-		        $(".trigger").click(function () {
+		        $("#trigger").click(function () {
 		            $(".panel").toggle("fast");
 		            $(this).toggleClass("active");
 		            return false;
@@ -263,6 +270,333 @@
 			}
             }
             
+            function animate3(canvas, animProp){
+			 if (animProp.animate) {
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                var date = new Date();
+                var time = date.getTime();
+                
+                // update
+                var widthScale = Math.sin(time / 400) * 0.1 + 0.9;
+                var heightScale = -1 * Math.sin(time / 100) * 0.1 + 0.9;
+                
+                // clear
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // draw
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(0, 0, 60, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#EEAD0E";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+                
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(20, -20, 5, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "white";
+                context.fill();
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(-20, -20, 5, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "white";
+                context.fill();
+                
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(0, 10, 5, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "white";
+                context.fill();
+
+                // request new frame
+                requestAnimFrame(function(){
+                    animate3(canvas,animProp);
+                });
+			}
+            }
+
+             function animate4(canvas, animProp){
+			 if (animProp.animate) {
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                var date = new Date();
+                var time = date.getTime();
+                
+                // update
+                var widthScale = Math.sin(time / 300) * 0.1 + 0.2;
+                var heightScale = -1 * Math.sin(time / 300) * 0.1 + 0.2;
+                
+                // clear
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // draw
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(0, 0, 60, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#8B008B";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+                
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(-130, 0, 60, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#8B008B";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(-260, 0, 60, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#8B008B";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(130, 0, 60, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#8B008B";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(260, 0, 60, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#8B008B";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+                   
+                // request new frame
+                requestAnimFrame(function(){
+                    animate4(canvas,animProp);
+                });
+			}
+            }
+
+            function animate5(canvas, animProp){
+			 if (animProp.animate) {
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                var date = new Date();
+                var time = date.getTime();
+                
+                // update
+                var widthScale = Math.sin(time / 330) * 0.5 + 0.5;
+                var heightScale = -1 * Math.sin(time / 330) * 0.1 + 0.9;
+                
+                // clear
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // draw
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(0, 0, 70, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#CD661D";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+                
+                
+                // request new frame
+                requestAnimFrame(function(){
+                    animate5(canvas,animProp);
+                });
+			}
+            }
+
+            function animate6(canvas, animProp){
+			 if (animProp.animate) {
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                var date = new Date();
+                var time = date.getTime();
+                
+                // update
+                var widthScale = Math.sin(time / 400) * 0.1 + 0.9;
+                var heightScale = -1 * Math.sin(time / 400) * 0.2 + 0.8;
+                
+                // clear
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // draw
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(0, 0, 60, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#8ED6FF";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+                
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(20, -10, 50, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "white";
+                context.fill();
+                
+                // request new frame
+                requestAnimFrame(function(){
+                    animate6(canvas,animProp);
+                });
+			}
+            }
+
+             function animate7(canvas, animProp){
+			 if (animProp.animate) {
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                var date = new Date();
+                var time = date.getTime();
+                
+                // update
+                var widthScale = Math.sin(time / 350) * 0.7 + 0.3;
+                var heightScale = -1 * Math.sin(time / 350) * 0.3 + 0.7;
+                
+                // clear
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // draw
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(0, 0, 60, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#218868";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(-60, 0, 20, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#141414";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();  
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(60, 0, 20, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#141414";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(50, 50, 20, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#141414";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(-50, 50, 20, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#141414";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(50, -50, 20, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#141414";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+
+                context.beginPath();
+                context.save();
+                context.translate(canvas.width / 2, canvas.height / 2);
+                context.scale(widthScale, heightScale);
+                context.arc(-50, -50, 20, 0, 2 * Math.PI, false);
+                context.restore();
+                context.fillStyle = "#141414";
+                context.fill();
+                context.lineWidth = 2;
+                context.strokeStyle = "#555";
+                context.stroke();
+                               
+                // request new frame
+                requestAnimFrame(function(){
+                    animate7(canvas,animProp);
+                });
+			}
+            }
+
             	
 			function event1(){
 				var canvas = document.getElementById("canvas1");
@@ -411,12 +745,142 @@
 					context.clearRect(0, 0, canvas.width, canvas.height);
 				});
             };
+
+            function event7(){
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                                
+                var animProp = {
+                    animate: false
+                };
+
+                document.getElementById("banner_top").addEventListener("mouseover", function(){
+                    if (animProp.animate) {
+                        animProp.animate = false;
+                    }
+                    else {
+                        animProp.animate = true;
+                        animate3(canvas,animProp);					
+                    }
+                });
+				
+				document.getElementById("banner_top").addEventListener("mouseout", function(){
+					animProp.animate = false;
+					context.clearRect(0, 0, canvas.width, canvas.height);
+				});
+				
+            };
+
+            function event8(){
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                                
+                var animProp = {
+                    animate: false
+                };
+
+                document.getElementById("slide-holder").addEventListener("mouseover", function(){
+                    if (animProp.animate) {
+                        animProp.animate = false;
+                    }
+                    else {
+                        animProp.animate = true;
+                        animate4(canvas,animProp);					
+                    }
+                });
+				
+				document.getElementById("slide-holder").addEventListener("mouseout", function(){
+					animProp.animate = false;
+					context.clearRect(0, 0, canvas.width, canvas.height);
+				});	
+				
+            };
+
+            function event9(){
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                                
+                var animProp = {
+                    animate: false
+                };
+
+                document.getElementById("sun").addEventListener("mouseover", function(){
+                    if (animProp.animate) {
+                        animProp.animate = false;
+                    }
+                    else {
+                        animProp.animate = true;
+                        animate5(canvas,animProp);					
+                    }
+                });
+				
+				document.getElementById("sun").addEventListener("mouseout", function(){
+					animProp.animate = false;
+					context.clearRect(0, 0, canvas.width, canvas.height);
+				});	
+				
+            };
+
+            function event10(){
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                                
+                var animProp = {
+                    animate: false
+                };
+
+                document.getElementById("moon").addEventListener("mouseover", function(){
+                    if (animProp.animate) {
+                        animProp.animate = false;
+                    }
+                    else {
+                        animProp.animate = true;
+                        animate6(canvas,animProp);					
+                    }
+                });
+				
+				document.getElementById("moon").addEventListener("mouseout", function(){
+					animProp.animate = false;
+					context.clearRect(0, 0, canvas.width, canvas.height);
+				});	
+				
+            };
+
+            function event11(){
+				var canvas = document.getElementById("canvas1");
+                var context = canvas.getContext("2d");
+                                
+                var animProp = {
+                    animate: false
+                };
+
+                document.getElementById("trigger").addEventListener("mouseover", function(){
+                    if (animProp.animate) {
+                        animProp.animate = false;
+                    }
+                    else {
+                        animProp.animate = true;
+                        animate7(canvas,animProp);					
+                    }
+                });
+				
+				document.getElementById("trigger").addEventListener("mouseout", function(){
+					animProp.animate = false;
+					context.clearRect(0, 0, canvas.width, canvas.height);
+				});	
+				
+            };
 			
 			function initAll(){
 				event1();
 				event2();
 				event3();
 				event6_tv();
+                event7();
+                event8();
+                event9();
+                event10();
+                event11();
 			}
 			
 			window.onload = initAll;	
@@ -491,22 +955,46 @@
 			<div class="columns">
 				<div class="colleft">
 					<ul>
-						<li><a href="http://www.nba.com/" target="_blank" title="Nba home">NBA</a></li>
+                        <li><a href="http://www.youtube.com/user/NBA" target="_blank" title="Youtube NBA Channel">Youtube NBA Ch.</a></li>
+						<li><a href="http://www.basketball-reference.com/" target="_blank" title="Basketball Reference">Basketball Reference</a></li>
+                        <li><a href="http://hoopshype.com/" target="_blank" title="Hoopshype">Hoopshype</a></li>
+                        <li><a href="http://sportsillustrated.cnn.com/basketball/nba/?eref=sinav" target="_blank" title="Sports Illustrated NBA">Sports Illustrated</a></li>
 					</ul>
 				</div>
 			
 				<div class="colright">
 					<ul>
-						<li><a href="http://www.basketball-reference.com/" target="_blank" title="BB reference">Basketball Reference</a></li>
-
+                        <li><a href="http://www.nba.com/" target="_blank" title="Nba home">NBA</a></li>
+                        <li><a href="http://espn.go.com/nba/" target="_blank" title="ESPN Nba">ESPN Nba</a></li>
+                        <li><a href="http://sports.yahoo.com/nba" target="_blank" title="Sports Yahoo NBA">Sports Yahoo</a></li>
+                        <li><a href="http://bleacherreport.com/nba" target="_blank" title="Bleacher Report NBA">Bleacher Report</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-	   <asp:AccessDataSource ID="AccessDataSource1" runat="server" 
-               DataFile="~/db/baza.accdb" SelectCommand="SELECT * FROM [Table]">
-       </asp:AccessDataSource>
-		<a class="trigger" href="#">Links</a>
+
+        <section class="rw-wrapper">
+				<div class="rw-sentence">
+					<span>Poetry in motion</span><br />
+					<span>sets wheels in motion</span><br />
+					<span>and the words start</span><br />
+                    <span>flying</span>
+					<div class="rw-words rw-words-1">
+						<span>'Air' Jordan</span>
+						<span>Dr. J</span>
+						<span>Dominique Wilkins</span>
+						<span>Vince Carter</span>
+						<span>Spud Webb</span>
+						<span>'Reign Man' Kemp</span>
+						<span>Blake Griffin</span>
+						<span>Nate Robinson</span>
+						<span>Kobe Bryant</span>
+						<span>Lebron James</span>
+					</div>
+				</div>
+		</section>
+
+		<a id="trigger" href="#">Links</a>
 		
 			<img id="moon" src="Images/moon.png" alt="paper moon"/>
 			<img id="banner_top" src="Images/dunkers_banner.jpg" alt="Dunkers banner" />
@@ -520,7 +1008,7 @@
 			
 			<canvas id="canvas1" width="180" height="141">
 			</canvas>
-			
+
 			<div id="menu1">
                     <ul class="a">
 						<li id="home"><a href="default.aspx">Home</a></li>
@@ -567,14 +1055,14 @@
 							{ "id": "slide-img-11", "client": "Jason Richardson", "desc": "dunk contest"}];
 					   </script>
 			</div>
-                			
+             
 			<div id="bodi">
                   <div id="booklet_pages">
-                    <a href="#/page/2">Short</a>
-                    <a href="#/page/10">Power</a>
-                    <a href="#/page/18">Power2</a>
-                    <a href="#/page/24">Athletic</a>
-                    <a href="#/page/30">Athletic2</a>
+                    <a href="#/page/2" title="Return to Page 1">Short</a>
+                    <a href="#/page/10" title="Page 8">Power</a>
+                    <a href="#/page/18" title="Page 16">Power2</a>
+                    <a href="#/page/24" title="Page 22">Athletic</a>
+                    <a href="#/page/30" title="Page 28">Athletic2</a>
                 </div>
 				<div class="book_wrapper">
                
